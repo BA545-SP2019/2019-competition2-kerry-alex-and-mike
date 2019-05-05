@@ -9,8 +9,8 @@ features = tpot_data.drop('target', axis=1).values
 training_features, testing_features, training_target, testing_target = \
             train_test_split(features, tpot_data['target'].values, random_state=None)
 
-# Average CV score on the training set was:0.7877330583110975
-exported_pipeline = LogisticRegression(C=25.0, dual=False, penalty="l2")
+# Average CV score on the training set was:0.7873336409459685
+exported_pipeline = LogisticRegression(C=10.0, dual=False, penalty="l2")
 
 exported_pipeline.fit(training_features, training_target)
 results = exported_pipeline.predict(testing_features)
